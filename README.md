@@ -2,12 +2,14 @@
 Post variant-calling QC pipeline for orienting cohort data with a reference file. An additional step for merging and phasing jointly with a reference panel is also included. Both steps are implemented as automated scripts that can be called with bash. The main code is in bash, optimized for a module-based system (such as Lisa), but can be quickly modified for use in most environments. Subscripts are in python. 
 
 Usage:
+
 Lauch step 1:
 
 sh CohortDataQC_final.sh <pink binary file stem>. 
      Output is suffixed with .QCed
 
 Launch step 2:
+
 sh CohortDataQC_mergephase.sh <plink binary file stem>. 
      output is in haps/sample format from SHAPEIT2
 
