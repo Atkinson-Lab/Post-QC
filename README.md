@@ -1,4 +1,4 @@
-# CohortDataQC
+# Post-QC
 Post variant-calling QC pipeline for orienting cohort data with a reference file. An additional step for merging and phasing jointly with a reference panel is also included. Both steps are implemented as automated scripts that can be called with bash. The main code is in bash, optimized for a module-based system (such as Lisa), but can be quickly modified for use in most environments. Subscripts are in python. 
 
 Dependencies:
