@@ -3,11 +3,12 @@ Post variant-calling QC pipeline for orienting cohort data with a reference file
 
 Usage:
 Lauch step 1:
-sh CohortDataQC_final.sh <pink binary file stem>
+
+sh CohortDataQC_final.sh <pink binary file stem>. 
      Output is suffixed with .QCed
 
 Launch step 2:
-sh CohortDataQC_mergephase.sh <plink binary file stem>
+sh CohortDataQC_mergephase.sh <plink binary file stem>. 
      output is in haps/sample format from SHAPEIT2
 
 Dependencies:
