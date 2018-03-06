@@ -1,20 +1,5 @@
 # Post-QC
-Post variant-calling QC pipeline for orienting cohort data with a reference file. An additional step for merging and phasing jointly with a reference panel is also included. Both steps are implemented as automated scripts that can be called with bash. The main code is in bash, optimized for a module-based system (such as Lisa), but can be quickly modified for use in most environments. Subscripts are in python. 
-
-
-Usage:
-
-
-Lauch step 1:
-
-sh CohortDataQC_final.sh <pink binary file stem>. 
-     Output is suffixed with .QCed
-
-Launch step 2:
-
-sh CohortDataQC_mergephase.sh <plink binary file stem>. 
-     output is in haps/sample format from SHAPEIT2
-       
+Post variant-calling QC pipeline for orienting cohort data with a reference file. An additional step for merging and phasing jointly with a reference panel is also included. Both steps are implemented as automated scripts that can be called with bash. The main code is in bash, optimized for a module-based system (such as Lisa), but can be quickly modified for use in most environments. Subscripts are in python.        
 
 
 
@@ -47,3 +32,15 @@ Though this is hard-coded for 1000G, any reference panel legend file should work
 
 STEP 2: Data harmonization and phasing
 Post-QC'ed cohort data is then intersected and jointly phased with a user-specified reference panel of individuals. When merging, the scripts documents and removes many remaining onflicting and multi-allelic sites. The merged dataset is then filtered to include only informative SNPs present in both the cohort data and the reference panel using a minor allele frequency filter of 0.5% and a genotype missingness cutoff of 90%. The program Shapeit2 (O’Connell et al., 2014) is used to phase each chromosome separately, informed by the HapMap combined b37 recombination map (The International HapMap Consortium 2005). Users will need to change the path to the recombination map used to reflect its present in their directories. 
+
+
+
+
+Usage:
+
+Lauch step 1:  sh CohortDataQC_final.sh <pink binary file stem>. 
+     Output is suffixed with .QCed
+
+
+Launch step 2:  sh CohortDataQC_mergephase.sh <plink binary file stem>. 
+     output is in haps/sample format from SHAPEIT2
