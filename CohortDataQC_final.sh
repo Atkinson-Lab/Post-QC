@@ -11,7 +11,8 @@
 ## 4. python installed and on the path
 ## Result: A new set of binary plink files where all allele rsIDs are renamed to dbsnp144, sites are oriented to 1000 genomes, with non-matching sites, indels, duplicates, sex chromosomes, and triallelic sites removed. Output plink files will be the input DATA name suffixed with QC.
 
-## Usage is CohortDataQC.sh <data-bed-stem>
+## Usage:
+##  sh CohortDataQC.sh <data-bed-stem>
 
 
 ##  Unpack the parameters into labelled variables
