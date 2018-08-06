@@ -44,3 +44,7 @@ Lauch step 1:  sh CohortDataQC_final.sh <pink binary file stem>.
 
 Launch step 2:  sh CohortDataQC_mergephase.sh <plink binary file stem>. 
      output is in haps/sample format from SHAPEIT2
+     
+
+An additional script to process output files and run Local Ancestry Inference (using RFmix) is also provided, should ancestry deconvolution be required.
+Usage: sh PrepandrunRFmix_2way.sh <file stem name>
