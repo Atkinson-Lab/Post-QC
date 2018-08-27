@@ -19,7 +19,7 @@ Post-variant calling QC to clean and consistently prepare the data for downstrea
 1.	Extract only autosomes in data file 
 2.	Find and get rid of duplicate loci
 3.	Update SNP IDs to dbsnp 144 (Sherry et al., 2001)
-4.	Orient data to 1000 genome reference
+4.	Orient data to 1000 genome reference. This involves 3 substeps:
      a.	Find and remove indels
      b.	Find and remove loci not found in 1000 genome, or that have different coding alleles than 1000 genome (tri-allelic, for example)
      c.	Flip alleles that are on the wrong strand
