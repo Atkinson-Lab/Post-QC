@@ -20,9 +20,9 @@ Post-variant calling QC to clean and consistently prepare the data for downstrea
 2.	Find and get rid of duplicate loci
 3.	Update SNP IDs to dbsnp 144 (Sherry et al., 2001)
 4.	Orient data to 1000 genome reference
-a.	Find and remove indels
-b.	Find and remove loci not found in 1000 genome, or that have different coding alleles than 1000 genome (tri-allelic, for example)
-c.	Flip alleles that are on the wrong strand
+     a.	Find and remove indels
+     b.	Find and remove loci not found in 1000 genome, or that have different coding alleles than 1000 genome (tri-allelic, for example)
+     c.	Flip alleles that are on the wrong strand
 5.	Remove A/T, G/C loci
 
 This script also outputs warnings if more than 2% of sites are incongruous between the input dataset and 1000G locations. A large discrepancy in SNP physical locations can occur if the datasets are on different reference builds. A/T and G/C loci are unable to be strand-resolved and for this are routinely removed.
