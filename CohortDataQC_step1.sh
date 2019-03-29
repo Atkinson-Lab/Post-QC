@@ -83,6 +83,9 @@ python /home/atkinson/Scripts/find_cg_at_snps.py $DATA.auto.nodup.dbsnp.1ksites.
 
 module unload python
 module load plink2
-plink --bfile $DATA.auto.nodup.dbsnp.1ksites.flip --exclude $DATA.ATCGsites --make-bed --out $DATA.QCed
+plink --bfile $DATA.auto.nodup.dbsnp.1ksites.flip --exclude $DATA.ATCGsites --make-bed --out $DATA.auto.nodup.dbsnp.1ksites.flip.noATCG
+
+#filter for HWE. Set to threshold 0.001
+plink --bfile $DATA.auto.nodup.dbsnp.1ksites.flip.noATCG --hwe 0.001 --make-bed --out $DATA.QCed
 
 #cohort data is now formatted to merge properly with the 1000G reference panel
