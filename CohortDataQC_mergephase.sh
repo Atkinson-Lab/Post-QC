@@ -88,6 +88,8 @@ plink --bfile $DATA.auto.nodup.dbsnp.1ksites.flip --exclude $DATA.ATCGsites --ma
 plink --bfile /home/atkinson/PGC-PTSD/LAI/AdmixRef/1000G_AAref/85anc/SNPsonly/1000G_85ancAdmixRef_snps_auto1 --bmerge $DATA.QCed --make-bed --out $DATA.QCed.1kmerge
 
 #filter merged dataset to only include well-genotyped sites present on both the cohort and 1000G platforms - 90% genotyping rate and MAF >= 0.5%
+##NOTE: For smaller datasets, it is better to skip this step and instead keep just the sites that are reliable on each platform and shared. 
+#I.e. intersect the sites lists and extract just these sites in both datasets. This gets around issues of bias by sample size differences between the cohort and reference datasets.
 plink --bfile $DATA.QCed.1kmerge --allow-no-sex --make-bed --geno 0.1 --maf 0.005 --out $DATA.QCed.1kmerge.filt
 
 #separate out the chromosomes for phasing
