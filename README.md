@@ -1,5 +1,5 @@
 # Post-QC
-Post variant-calling QC pipeline for orienting cohort data with a reference file. An additional step for merging and phasing jointly with a reference panel is also included. Both steps are implemented as automated scripts that can be called with bash. The main code is in bash, optimized for a module-based system (such as Lisa), but should work in most environments. Subscripts are in python.        
+Post variant-calling QC pipeline for orienting cohort data with a reference file. An additional step for merging, phasing jointly with a reference panel, and running local ancestry inference is also included. Both steps are implemented as automated scripts that can be called with bash. Subscripts are in python.        
 
 
 
@@ -12,6 +12,8 @@ Step 1 (cohort data post-QC and/or merging):
 Step 2: (phasing)
      PLINK
      SHAPEIT2
+     VCFtools
+     RFmix
 
 
 Detailed description of STEP 1: Cohort Data Post-QC and harmonization with a reference panel
