@@ -43,7 +43,7 @@ Post-QC'ed cohort data is then intersected and jointly phased with a user-specif
 
 Usage:
 Launch step 2:  
-```sh Merge_Phase_RFmix.sh <plink binary file stem> ``` 
+```sh Merge_Phase_RFmix.sh <data-stem> <ref-stem> <genetic-recomb-map> <ancestry-ref-map> ``` 
 
 Output will be in haps/sample format from SHAPEIT2, followed by local ancestry calls from RFMix.
 
