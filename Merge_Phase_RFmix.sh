@@ -3,7 +3,7 @@
 ### 2/22/18
 ## post-processing shapeit haps/sample files to be input into RFmix for cohort local ancestry inference
 
-## Usage is sh PrepandrunRFmix.sh <data-stem> <ref-stem> <genetic-recomb-map> <ancestry-ref-map>
+## Usage is sh Merge_Phase_RFmix.sh <data-stem> <ref-stem> <genetic-recomb-map> <ancestry-ref-map>
 ## the script will only consider the autosomes unless modified
 ## data stem is the core filename before "*chr{1-22}.haps/sample"
 ## shapeit2, RFMix v2, plink, and vcftools are expected to be in the path 
