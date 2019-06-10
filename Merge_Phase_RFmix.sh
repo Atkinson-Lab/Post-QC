@@ -28,6 +28,10 @@ for i in {1..22}; do plink --bfile $DATA.QCed.1kmerge.filt --allow-no-sex --chr 
 
 #then phase them with SHAPEIT2
 #assuming all chroms are present in the same genetic map file linked to in initial command
+###NOTE - this conducts joint phasing with the reference panel. In many cases you'll want to phase the cohort data using the reference panel as a separate flag.
+#That can be instead implemented in SHAPEIT2 with a flag similar to:
+#  --input-ref reference.haplotypes.gz reference.legend.gz reference.sample \
+
 for i in {1..22}; do \
 shapeit --input-bed $DATA.QCed.1kmerge.filt.chr${i} -M $GEN -O $DATA.QCed.1kmerge.filt.phased.chr${i} --thread 8 ;done
 
